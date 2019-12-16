@@ -2,12 +2,19 @@ using System;
 using NUnit.Framework;
 using Lab_08_TDD_Collections;
 using Lab_09_Rabbit_Test;
+using Lab_17_Nothwind_Tests;
+using Lab_14_LINQ;
+using Lab_20_Northwind_Products;
+using Lab_28_Fibonacci;
+using Simpson_HW;
 
 namespace NUNIT_Tests
 {
     [TestFixture]
     public class Tests
     {
+        #region ArrayTests
+
         Lab_08_Array_List_Dictionary lab = new Lab_08_Array_List_Dictionary();
 
         [SetUp]
@@ -42,6 +49,10 @@ namespace NUNIT_Tests
             Assert.AreEqual(expected, act);
         }
 
+        #endregion
+
+        #region RabbitTests
+
         [TestCase(3,7,8)]
         public void RabbitGrowthTests(int totalYears,int expectedRabbitAge,int expectedRabbitCount)
         {
@@ -73,5 +84,76 @@ namespace NUNIT_Tests
             Assert.AreEqual(expectedRabbitAge, actualRabbitAge);
             Assert.AreEqual(expectedRabbitCount, actualRabbitCount);
         }
+
+        #endregion
+
+        #region TestNumberOfNorthwindCustomers
+
+        [TestCase(null, 91)]
+        [TestCase("London", 6)]
+
+        public void TestNumberOfNorthwindCustomers(string city, int expected)
+        {
+          
+            // Assert
+            Assert.AreEqual(expected, Lab_14_LINQ.Program.GetCustomers(city));
+
+        }
+
+
+        #endregion
+
+        #region TestNumberOfProducts
+        [TestCase(3, "P")]
+        [TestCase(3, "P")]
+        public void TestNumberOfProductsStartingWithP(int expected, string product)
+        {
+            // Arrange (Instance)
+
+
+            // Act (Method)
+
+
+            // Assert
+            Assert.AreEqual(expected, Lab_20_Northwind_Products.Program.GetProducts(product));
+
+        }
+
+        #endregion
+
+        #region FibonacciTests
+
+        [TestCase(5,5)]
+        [TestCase(1,0)]
+
+        public void TestFibonacciNthNumber(int expected, int nth)
+        {
+            // Arrange (Instance)
+
+            // Act (Method)
+
+
+            // Assert
+            Assert.AreEqual(expected, Lab_28_Fibonacci.Fibonacci.ReturnFibonacciNthItemInSequence(nth));
+        }
+
+        #endregion
+
+        #region Simpsons
+        [TestCase(6, 0, 6, 72)]
+        [TestCase(3, 0, 6, 145)]
+        [TestCase(12, 0, 12, 576)]
+        [TestCase(6, 0, 12, 1153)]
+        public void TestSimposon(int n, int min, int max, int actual)
+        {
+            Simpson simpson = new Simpson();
+
+            double expected = simpson.areaApprox(n, min, max);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        #endregion 
     }
 }

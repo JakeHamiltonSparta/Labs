@@ -25,6 +25,7 @@
             <RowDefinition Height="3*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
+       
         <Label Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" Content="ToDo Application" Background="#74D4E8"
                HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         

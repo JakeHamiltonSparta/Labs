@@ -31,28 +31,6 @@ namespace Lab_13_WPF_ToDo_Application
             Initialise();
         }
 
-        //void InitialiseListBoxOfStrings()
-        //{
-        //    //items.Add("Hey this is an item");
-        //    //items.Add("Hey this is an item");
-        //    //items.Add("Hey this is an item");
-
-        //    ListBoxTasks.ItemsSource = items;
-
-        //    //items.Add("New item");
-
-        //    using (var db = new TasksDBEntities())
-        //    {
-        //        tasks = db.Tasks.ToList();
-        //    }
-        //    // Get descriptions and add to list
-        //    foreach (var item in tasks)
-        //    {
-        //        //items.Add(item.Description);
-        //        items.Add($"{item.TaskID, -10}{item.Description,-10}{item.Done,-10}{item.DateCompleted,-10}");
-        //    }
-        //}
-
         void Initialise()
         {
             using (var db = new TasksDBEntities())
@@ -165,6 +143,7 @@ namespace Lab_13_WPF_ToDo_Application
 
                 // Update description and CategoryID
                 int.TryParse(TextBoxCategoryID.Text, out int categoryID);
+
                 var taskToAdd = new Task()
                 {
                   Description = TextBoxDescription.Text,
@@ -197,7 +176,6 @@ namespace Lab_13_WPF_ToDo_Application
                 TextBoxDescription.Background = Brushes.Red;
                 TextBoxCategoryID.Background = Brushes.Red;
 
-                
             }
             else
             {
@@ -222,9 +200,6 @@ namespace Lab_13_WPF_ToDo_Application
                 TextBoxDescription.Background = Brushes.White;
                 TextBoxCategoryID.Background = Brushes.White;
             }
-
-            
         }
-
     }
 }
