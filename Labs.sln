@@ -90,7 +90,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_30_Debugging", "Lab_30_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_31_Event_Logging", "Lab_31_Event_Logging\Lab_31_Event_Logging.csproj", "{6C042772-088B-4A75-9168-5E3181FAFE45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab_32_MVC_Core_Entity_Framework", "Lab_32_MVC_Core_Entity_Framework\Lab_32_MVC_Core_Entity_Framework.csproj", "{000715B2-17F9-4D24-93DE-325E7AAC12A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab_32_MVC_Core_Entity_Framework", "Lab_32_MVC_Core_Entity_Framework\Lab_32_MVC_Core_Entity_Framework.csproj", "{000715B2-17F9-4D24-93DE-325E7AAC12A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F17B7B9E-F6D1-4C2A-909A-1F88329A632E}"
+	ProjectSection(SolutionItems) = preProject
+		.git\README.md = .git\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
