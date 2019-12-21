@@ -8,7 +8,7 @@ namespace Lab_33_MVC_Framework_Entity_Helpdesk
     public partial class HelpdeskModel : DbContext
     {
         public HelpdeskModel()
-            : base("name=AzureHelpdeskModel")
+            : base("name=HelpdeskModel")
         {
         }
 

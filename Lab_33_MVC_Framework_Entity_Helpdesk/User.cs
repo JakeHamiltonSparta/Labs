@@ -16,6 +16,11 @@ namespace Lab_33_MVC_Framework_Entity_Helpdesk
 
         public int? CategoryId { get; set; }
 
+
+        public string NewField2 { get; set; }
+
+        public int NewFieldInt { get; set; }
+
         public virtual Category Category { get; set; }
     }
 }

@@ -17,6 +17,12 @@
         <th>
             @Html.DisplayNameFor(model => model.UserName)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NewField2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsLiveuser)
+        </th>
         <th></th>
     </tr>
 
@@ -27,6 +33,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NewField2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsLiveuser)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.UserId }) |
